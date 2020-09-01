@@ -22,26 +22,8 @@
         $isSuccess          = true;
         $isUploadSuccess    = false;
         
-        if(empty($name)) 
-        {
-            $nameError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        }
-        if(empty($description)) 
-        {
-            $descriptionError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        } 
-        if(empty($price)) 
-        {
-            $priceError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        } 
-        if(empty($category)) 
-        {
-            $categoryError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        }
+        require 'if_field_verification.php';
+        
         if(empty($image)) 
         {
             $imageError = 'Ce champ ne peut pas être vide';

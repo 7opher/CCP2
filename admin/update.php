@@ -26,27 +26,8 @@
         $imageExtension     = pathinfo($imagePath,PATHINFO_EXTENSION);
         $isSuccess          = true;
        
-        if(empty($name)) 
-        {
-            $nameError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        }
-        if(empty($description)) 
-        {
-            $descriptionError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        } 
-        if(empty($price)) 
-        {
-            $priceError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        } 
-         
-        if(empty($category)) 
-        {
-            $categoryError = 'Ce champ ne peut pas être vide';
-            $isSuccess = false;
-        }
+        require 'if_field_verification.php';
+        
         if(empty($image)) // le input file est vide, ce qui signifie que l'image n'a pas ete update
         {
             $isImageUpdated = false;
@@ -138,7 +119,7 @@
          <div class="container admin">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1 class="text-center"><strong>Modifier<?php echo '  '.$item['name'];?></strong></h1>
+                    <h1 class="text-center"><strong>Modifier Article</strong></h1>
                     <br>
                     <form class="form" action="<?php echo 'update.php?id='.$id;?>" role="form" method="post" enctype="multipart/form-data">
                         <div class="form-group">
