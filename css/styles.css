@@ -28,6 +28,7 @@ h1{
 
 .nav
 {
+    margin-top: 10px;
     margin-bottom: 40px;
 
 }
@@ -39,7 +40,7 @@ h1{
 {
     padding: 8px;
 }
-.card img
+.card img, .thumbnail img 
 {
     background: rgb(185, 185, 185);
 }
@@ -47,12 +48,12 @@ h1{
 {
     background: #936e60;
     box-shadow: 0 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 1px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 2px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 2px rgba(0,0,0,0.2);
     color: #fff;
     text-shadow: 2px 2px #333;
     position: absolute;
-    right: 1px;
+    right: 12px;
     top: 20px;
     padding: 5px 10px;
     font-size: 20px;
@@ -122,12 +123,9 @@ h1{
     padding-top: 15px;
     margin-bottom: 25px;
 }
-
-#success_admin
+#button_signin
 {
-    width: 500px;
-    margin-top: 5px;
-    margin-right: auto;
-    margin-left: auto;
+    padding-top: 15px;
+    margin-bottom: 25px;
 }
 
