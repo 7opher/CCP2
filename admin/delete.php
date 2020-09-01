@@ -45,7 +45,7 @@ $db = Database::connect();
     <div class="container admin">
         <div class="row">
             <div class="col">
-                <h1 class="text-center"><strong>Supprimer <?php echo '  '.$item['name'];?> définitivement?</strong></h1>
+                <h1 class="text-center"><strong>Supprimer <span class="alert-dark"><?php echo '  '.$item['name'];?></span></strong></h1>
                 <br>
 
                 <form class="form" action="delete.php" role="form" method="post">
