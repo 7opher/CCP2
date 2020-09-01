@@ -57,7 +57,7 @@
                             <div class="caption">
                                 <h4>' . $item['name'] . '</h4>
                                 <p>' . $item['description'] . '</p>
-                                <a href="#" class="btn btn-order" role="button"></span> Contacter</a>
+                                <a href="https://www.escotoiture.fr/accueil.html" class="btn btn-order" role="button"></span> Contacter</a>
                             </div>
                         </div>
                     </div>';
