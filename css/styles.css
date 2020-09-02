@@ -122,14 +122,8 @@ h1{
     margin: auto;
     width: 80%;
 }
-#button_logout
+.button_log
 {
     padding-top: 15px;
     margin-bottom: 25px;
 }
-#button_signin
-{
-    padding-top: 15px;
-    margin-bottom: 25px;
-}
-

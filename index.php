@@ -5,8 +5,8 @@
 
 
 <body>
-    <nav class="container-fluid navbar navbar-preview fixed-top">
-        <div id="button_signin">
+    <nav class="navbar navbar-preview fixed-top">
+        <div class="container mb-2 button_log">
             <a class="btn btn-default btn-lg" role="button" href="registration/login.php">
                 Admin
             </a>

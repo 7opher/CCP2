@@ -12,7 +12,7 @@ require_once('database.php')
 
 <body>
   <nav class="navbar">
-    <div class="container mb-2" id="button_signin">
+    <div class="container mb-2 button_log">
       <a id="btn_logOut" class="btn btn-danger btn-lg pull-right" href="../registration/index.php?logout='1'">
         Log out
       </a>
