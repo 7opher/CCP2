@@ -1,13 +1,14 @@
 <?php
 
 require 'session_start.php';
+require_once('database.php')
 
 ?>
 
 <!DOCTYPE html>
 <html>
 
-<?php require('../structure/head_admin.php'); ?>
+<?php require_once('../structure/head_admin.php'); ?>
 
 <body>
   <nav class="navbar">
@@ -20,7 +21,7 @@ require 'session_start.php';
 
 
 
-  <div class="container admin">
+  <div class="container admin mb-4">
     <div class="row">
       <div class="col">
         <!-- logged in user information -->
@@ -32,26 +33,27 @@ require 'session_start.php';
 
 
         <!-- notification message -->
-        <div class="text-center" id="success_admin">
-          <div>
-            <div class="alert alert-success alert-dismissible" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <span class="h4">Bienvenue <strong><?php echo $_SESSION['username']; ?></strong></span>
+        <div class="mb-4" id="success_admin">
+          <div class="text-center ">
+            <div class="alert alert-success alert-dismissible " role="alert">
+              <span class="h4"> Bienvenue <strong><?php echo $_SESSION['username']; ?></strong></span>
+
               <?php if (isset($_SESSION['success'])) : ?>
                 <div class="error success">
-                  <h3>
+                  <h5>
                     <?php
                     echo $_SESSION['success'];
                     unset($_SESSION['success']);
                     ?>
-                  </h3>
+                  </h5>
                 </div>
               <?php endif ?>
             </div>
           </div>
+
         </div>
 
-        <h1><strong>Liste des articles <a href="insert.php" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Ajouter</a></strong></h1>
+        <h1 class="mb-3 mt-3"><strong>Liste des articles <a href="insert.php" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Ajouter</a></strong></h1>
         <table class="table table-striped table-bordered table-responsive">
           <thead>
             <tr>
@@ -64,7 +66,6 @@ require 'session_start.php';
           </thead>
           <tbody>
             <?php
-            require 'database.php';
             $db = Database::connect();
             $statement = $db->query('SELECT items.id, items.name, items.description, items.price, categories.name AS category FROM items LEFT JOIN categories ON items.category = categories.id ORDER BY items.id DESC');
             while ($item = $statement->fetch()) {
@@ -98,8 +99,11 @@ require 'session_start.php';
               echo '</td>';
               echo '</tr>';
             }
-            Database::disconnect();
+
             ?>
+
+            <?php Database::disconnect(); ?>
+
           </tbody>
         </table>
       </div>
